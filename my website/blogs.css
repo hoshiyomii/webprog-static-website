@@ -1,0 +1,290 @@
+:root{
+    --border-color: rgba(19, 17, 19, 0.226);
+    --text-color: rgb(19, 17, 19);
+    --text-color-light: rgb(248, 248, 248);
+    --text-color-transparent: rgba(240, 240, 240, 0.904);
+    
+    /* 
+    fonts
+    font-family: 'Arimo', sans-serif; sleek thin look
+    font-family: 'Josefin Sans', sans-serif; the fuck is this
+    font-family: 'Comfortaa', sans-serif; for header
+    */
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+    overflow: scroll;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+a{
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 300;
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    width: 100%;
+    border-bottom: 1px solid var(--border-color);
+}
+
+nav > .nav-section {
+    padding: 2rem 1rem;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+
+#navbar-home{
+    justify-content: flex-start;
+    transition: border-bottom 0.3s ease, border-right 0.3s ease, border-left 0.3s ease;
+}
+
+#navbar-blog,
+#navbar-port,
+#navbar-resume,
+#navbar-steam,
+#navbar-git{
+    transition: border-bottom 0.3s ease, border-right 0.3s ease, border-left 0.3s ease;
+}
+
+#navbar-home > a > i,
+#navbar-steam > a > i,
+#navbar-git > a > i {
+    font-size: 1.2rem;
+}
+
+#navbar-home,
+#navbar-blog,
+#navbar-port,
+#navbar-resume {
+    flex-basis:calc(100%/3)
+}
+
+#navbar-steam,
+#navbar-git {
+    flex-grow: 1;
+}
+
+#navbar-home:hover,
+#navbar-blog:hover,
+#navbar-port:hover,
+#navbar-resume:hover,
+#navbar-steam:hover,
+#navbar-git:hover {
+    border-bottom: 5px solid var(--border-color);
+    border-right: 2px solid var(--border-color);
+    border-left: 2px solid var(--border-color);
+}
+
+main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+main > article > .article-section{
+    margin-top: 10px;
+    height: 80vh;
+    width: 90vw;
+    display: flex;
+    background-size: contain;
+}
+
+main > article > .article-welcome-section{
+    display: flex;
+    background: rgb(255, 249, 244);
+}
+
+.container{
+    background: var(--text-color);
+    transition: background-color 500ms ease;
+    width: 50vw;
+}
+
+.container2{
+    width: 50vw;
+    transition: background-color 500ms ease;
+    border: 1px solid var(--border-color);
+}
+
+.container2:hover {
+    background-color: var(--text-color);
+}
+
+.container:hover {
+    background-color: white;
+}
+
+.container2:hover > #subtitle2_header,
+.container2:hover > #title2_header{
+    color: var(--text-color);
+}
+
+.container2:hover > #FAQ_header,
+.container2:hover > #skill_header,
+.container2:hover > #portfolio_header{
+    color: var(--text-color);
+}
+
+.container2:hover > #name_subtitle,
+.container2:hover > #bio_subtitle{
+    color: var(--text-color-light);
+}
+
+#title_header{
+    font-family: 'Comfortaa', sans-serif;
+    font-size: 5vw;
+    margin-bottom: 0;
+    margin-left: 1vw;
+    color: var(--text-color-light);
+}
+
+#subtitle_header{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 2vw;
+    margin-top: 5px;
+    margin-left: 1vw;
+    color: var(--text-color-transparent);
+}
+
+#title2_header{
+    font-family: 'Comfortaa', sans-serif;
+    font-size: 5vw;
+    margin-bottom: 0;
+    margin-right: 1vw;
+    text-align: right;
+}
+
+#subtitle2_header{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 2vw;
+    margin-top: 5px;
+    margin-right: 1vw;
+    text-align: right;
+}
+
+#skill_header{
+    font-family: 'Comfortaa', sans-serif;
+    font-size: 5vw;
+    margin-bottom: 0;
+    margin-left: 5vw;
+    margin-top: 15vh;
+    text-align: left;
+}
+
+#portfolio_header{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 2vw;
+    margin-top: 5px;
+    margin-left: 5vw;
+    text-align: left;
+}
+
+#FAQ_header{
+    font-family: 'Comfortaa', sans-serif;
+    font-size: 3vw;
+    margin-bottom: 0;
+    margin-right: 5vw;
+    text-align: right;
+    color: var(--text-color-light);
+}
+
+#FAQ_subtitle{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 2vw;
+    margin-right: 5vw;
+    margin-bottom: 0;
+    text-align: right;
+    margin-top: 10vh;
+    color: var(--text-color-transparent);
+}
+
+#name_subtitle,
+#bio_subtitle {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 2vw;
+    margin-top: 5px;
+    margin-left: 1vw;
+    color: var(--text-color);
+    text-align: left;
+}
+
+#bio_subtitle{
+    font-size: 1.5vw;
+}
+
+#policy_subtitle,
+#terms_subtitle {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 2vw;
+    margin-top: 5px;
+    margin-left: 1vw;
+    color: var(--text-color-light);
+    text-align: center;
+}
+
+#skill_subtitle,
+#portfolio_subtitle {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 2vw;
+    margin-top: 15vh;
+    margin-left: 1vw;
+    color: var(--text-color);
+    text-align: right;
+}
+
+#skill_subtitle,
+#portfolio_subtitle {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 2vw;
+    margin-top: 15vh;
+    color: var(--text-color);
+    text-align: right;
+}
+
+#QnA{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.4vw;
+    margin-top: 10vh;
+    margin-left: 1vw;
+    color: var(--text-color-light);
+    text-align: left;
+}
+
+#skill_subtitle{
+    font-weight: 600;
+}
+
+#portfolio_subtitle{
+    margin-top: 15vh;
+}
+   
+#blog_link{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.4vw;
+    margin-left: 1vw;
+    color: var(--text-color-light);
+    text-align: left;
+}
+
+#article_link{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 2vw;
+    margin-top: 1vh;
+    color: var(--text-color);
+    text-align: right;
+    margin-left: 15vw;
+    margin-top: 10vh;
+}
